@@ -3,7 +3,7 @@
 We propose a sample designs to assess the accuracy of the 
 MAD-Mex 2015 RapidEye (1:20,000) map (32 cover classes). 
 
-## Madmex
+### Madmex
 [MAD-MEX](http://madmex.conabio.gob.mx) (Monitoring Activity Data for the 
 Mexican REDD+ program) is a system to provide standardized annual wall-to-wall 
 land cover information by automatic satellite image classification for the 
@@ -15,12 +15,12 @@ interfaces, processes, into one uniform, consistent and scalable hardware and
 software platform are the core components of MAD-MEX, but also, is the result 
 of different governmental mexican organizations that follows international and national standardize guides. 
 
-## Accuracy Assessment
+### Accuracy Assessment
 In order to measure the performance of the Mad-Mex system we propose an 
 accuracy assesment where experts will revise a sample of Mad-Mex cover classes 
 and determine whether the class label is correct or not. 
 
-### Sample design
+#### Sample design
 The sample design is focused in estimating the overall proportion of area 
 correctly classified. 
 
@@ -46,3 +46,22 @@ prevalent class.
 
 **Agreement:** For a given unit (polygon) if reference label and map label 
 agree the map is correct for that unit.
+
+## Scripts
+
+### crear_marco_muestral_slurm.R
+Creates a `data.frame` with the following variables:
+
+#### input 
+/LUSTRE/MADMEX/tw/entrega2/Estado/tile - RapidEye tiles with classified polygons
+
+
+
+
+#### output
+datos_procesados/aaaa-mm-dd_pais_df.Rdata
+datos_procesados/aaaa-mm-dd_marco_muestral.Rdata
+
+
+
+#### Output
