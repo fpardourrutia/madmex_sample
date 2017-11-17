@@ -50,18 +50,47 @@ agree the map is correct for that unit.
 ## Scripts
 
 ### crear_marco_muestral_slurm.R
-Creates a `data.frame` with the following variables:
+Creates the sampling frame, consisting on a `data.frame` with the following variables: id, clase (madmex class), edo, 
+area, area_cat (area categorized) and estrato.
+
+To create the sampling frame we used *homogeneous* polygons, which are the output from madmex (post-processed to create polygons of at least 5000 m^2^), and divided so that each polygon belongs to only one State.
 
 #### input 
 /LUSTRE/MADMEX/tw/entrega2/Estado/tile - RapidEye tiles with classified polygons
-
-
-
 
 #### output
 datos_procesados/aaaa-mm-dd_pais_df.Rdata
 datos_procesados/aaaa-mm-dd_marco_muestral.Rdata
 
+### crear_marco_muestral_slurm.R
+Creates the sampling frame, consisting on a `data.frame` with the following variables: id, clase (madmex class), edo, 
+area, area_cat (area categorized) and estrato.
+
+To create the sampling frame we used *homogeneous* polygons, which are the output from madmex (post-processed to create polygons of at least 5000 m^2^), and divided so that each polygon belongs to only one State.
+
+#### input 
+/LUSTRE/MADMEX/tw/entrega2/Estado/tile - RapidEye tiles with classified polygons
+
+#### output
+datos_procesados/aaaa-mm-dd_pais_df.Rdata - sampling frame before tidying
+datos_procesados/aaaa-mm-dd_marco_muestral.Rdata - sampling frame
+
+### validar_marco_muestral.R
+Creates the sampling frame, consisting on a `data.frame` with the following variables: id, clase (madmex class), edo, 
+area, area_cat (area categorized) and estrato.
+
+To create the sampling frame we used *homogeneous* polygons, which are the output from madmex (post-processed to create polygons of at least 5000 m^2^), and divided so that each polygon belongs to only one State.
+
+#### input 
+procesamiento/funciones_leer_shapes.R - helper functions to read shapes
+datos_procesados/2017-08-18_marco_muestral.Rdata - 
+
+#### output
+datos_procesados/aaaa-mm-dd_pais_df.Rdata
+datos_procesados/aaaa-mm-dd_marco_muestral.Rdata - sampling frame
+
+## Process
+
+1. crear_marco_muestral_slurm -> marco_muestral
 
 
-#### Output
